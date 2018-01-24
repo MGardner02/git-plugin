@@ -9,3 +9,8 @@
 buildPlugin(jenkinsVersions: [null, '2.60.1'],
             findbugs: [run:true, archive:true, unstableTotalAll: '0'],
             failFast: false)
+
+def scmVars = checkout scm
+def commitHash = scmVars.GIT_COMMIT
+
+echo commitHash
