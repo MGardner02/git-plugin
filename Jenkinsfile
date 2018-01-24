@@ -1,9 +1,7 @@
 #!groovy
 
-def scmVars = checkout scm
-def commitHash = scmVars.GIT_COMMIT
-
-echo commitHash
+//echo commitHash
+echo scm.getUserRemoteConfigs()
 
 // Don't test plugin compatibility - exceeds 1 hour timeout
 // Allow failing tests to retry execution
